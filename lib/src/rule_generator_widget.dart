@@ -249,7 +249,7 @@ class RRuleGenerator extends StatelessWidget {
                                       child: ValueListenableBuilder(
                                         valueListenable: pickedDateNotifier,
                                         builder: (context, pickedDate, child) =>
-                                            OutlinedButton(
+                                            TextButton(
                                           onPressed: () async {
                                             final picked = await showDatePicker(
                                               context: context,
@@ -268,18 +268,22 @@ class RRuleGenerator extends StatelessWidget {
                                               valueChanged();
                                             }
                                           },
-                                          style: OutlinedButton.styleFrom(
-                                            side: const BorderSide(
-                                              color: Colors.black,
-                                            ),
-                                            shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8),
-                                            ),
-                                            padding: const EdgeInsets.symmetric(
-                                              vertical: 24,
-                                            ),
-                                          ),
+                                          style: config.showBorderForWidget
+                                              ? OutlinedButton.styleFrom(
+                                                  side: const BorderSide(
+                                                    color: Colors.black,
+                                                  ),
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            8),
+                                                  ),
+                                                  padding: const EdgeInsets
+                                                      .symmetric(
+                                                    vertical: 24,
+                                                  ),
+                                                )
+                                              : null,
                                           child: SizedBox(
                                             width: double.maxFinite,
                                             child: Text(

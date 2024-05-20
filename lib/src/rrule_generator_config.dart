@@ -11,6 +11,7 @@ class RRuleGeneratorConfig {
     this.headerTextStyle = const TextStyle(),
     this.textStyle = const TextStyle(),
     this.headerEnabled = true,
+    this.showBorderForWidget = false,
   });
 
   final bool headerEnabled;
@@ -22,4 +23,5 @@ class RRuleGeneratorConfig {
   final Color weekdayColor;
   final Color weekdayBackgroundColor;
   final Color textFieldBorderColor;
+  final bool showBorderForWidget;
 }

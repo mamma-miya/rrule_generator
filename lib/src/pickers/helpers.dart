@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
-Container buildDropdown({required Widget child}) {
+Container buildDropdown({required Widget child, bool showBorder = false}) {
   return Container(
-    decoration: BoxDecoration(
-      border: Border.all(),
-      borderRadius: BorderRadius.circular(8),
-    ),
+    decoration: showBorder
+        ? BoxDecoration(
+            border: Border.all(),
+            borderRadius: BorderRadius.circular(8),
+          )
+        : null,
     width: double.maxFinite,
     padding: const EdgeInsets.all(8),
     child: DropdownButtonHideUnderline(
