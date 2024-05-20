@@ -154,7 +154,7 @@ class Monthly extends StatelessWidget implements Period {
                           (index) => DropdownMenuItem(
                             value: index + 1,
                             child: Text(
-                              '${index + 1}.',
+                              '${index + 1}',
                               style: config.textStyle,
                             ),
                           ),
